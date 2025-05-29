@@ -25,7 +25,7 @@ function draw() {
 function getThemeColors() {
   //let hour = 18// testing line
   let hour = new Date().getHours(); 
-  // if condtion is used to switch between day and         night
+  // if condtion is used to switch between sunrise, day and night
   //Sunrise: 6 AM to 7.59am
   if (hour >= 6 && hour < 8) {
     return {
@@ -81,11 +81,11 @@ function drawStarsIfNight() {
 
     // Using 'for' to start the loop.
     // 'let i = 0' means it starts counting from 0.
-    // The loop keeps running as long as 'i' is less         than 10.
+    // The loop keeps running as long as 'i' is less than 10.
     // 'i++' means I'm adding 1 to 'i' after each loop.
     // Each time the loop runs, it draws one circle.
-    // So in total, 10 stars are being drawn in random         positions.
-    for (let i = 0; i < 10; i++) {
+    // So in total, 20 stars are being drawn in random positions.
+    for (let i = 0; i < 20; i++) {
       circle(random(width), random(height / 2),               random(1, 4));
     }
   }
@@ -107,8 +107,8 @@ function drawWaves() {
   waveHeight = 30;
   }
   
-  console.log(volume);
-  console.log(waveHeight);
+  //console.log(volume);
+  //console.log(waveHeight);
   
   //Draw filled base water
   noStroke();
